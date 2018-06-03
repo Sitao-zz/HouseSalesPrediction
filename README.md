@@ -40,3 +40,11 @@ Advantage:
 -	High flexibility: allows users to construct large number of models for comparison and select the best one for deployment. E.g. the selected models are all better than the optimal GRNN configuration.
 Disadvantage:
 -	Difficult for user to optimize: the performance of a certain MLP configuration varies in different training sessions, and the relationship between the MLP configuration and the performance is unclear
+
+## NN Ensembles
+Two different Fusion functions are chosen for ensemble
+-	mean value
+-	median value
+Two groups of child models are selected based on their individual RMSE scores on validation dataset.
+-	All models
+-	Only MLPR models
